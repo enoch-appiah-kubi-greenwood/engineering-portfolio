@@ -4,6 +4,7 @@ import Navbar from "./components/layout/Navbar";
 import HomePage from "./pages/HomePage";
 import GrowthPilotPage from "./pages/GrowthPilotPage";
 import ThinkingLogPage from "./pages/ThinkingLogPage";
+import MobileBankPage from "./pages/MobileBankPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/growthpilot" element={<GrowthPilotPage />} />
           <Route path="/thinking-log" element={<ThinkingLogPage />} />
+          <Route path="/mobile-bank" element={<MobileBankPage />} />
         </Routes>
       </main>
     </BrowserRouter>

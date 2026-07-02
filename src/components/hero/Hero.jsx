@@ -3,7 +3,7 @@ function Hero() {
     <section className="hero-section" id="home">
       <div className="hero-content">
         <p className="eyebrow">AI • FINTECH • CYBERSECURITY</p>
-        
+
         <h1>
           Building intelligent systems that help people and businesses make
           better decisions.
@@ -17,11 +17,11 @@ function Hero() {
         </p>
 
         <div className="hero-actions">
-          <a href="#growthpilot" className="primary-button">
-            View GrowthPilot
+          <a href="/growthpilot" className="primary-button">
+            Explore GrowthPilot
           </a>
-          <a href="#projects" className="secondary-button">
-            View Projects
+          <a href="#engineering-projects" className="secondary-button">
+            Browse Projects
           </a>
         </div>
       </div>

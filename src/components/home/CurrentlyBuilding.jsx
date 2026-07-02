@@ -1,47 +1,66 @@
+import { Link } from "react-router-dom";
+
 function CurrentlyBuilding() {
   const projects = [
     {
       title: "GrowthPilot",
-      status: "Flagship Project",
+      label: "Featured Project",
+      status: "Flagship Case Study",
       description:
         "An AI-powered business decision support platform that combines analytics, structured reasoning, and intelligent workflows to help entrepreneurs make more informed business decisions.",
+      link: "/growthpilot",
+      button: "Read Case Study",
+    },
+    {
+      title: "Mobile Bank",
+      label: "Software Project",
+      status: "Completed",
+      description:
+        "A C++ console banking application demonstrating secure authentication, persistent file storage, transaction management, and core software engineering fundamentals.",
+      link: "/mobile-bank",
+      button: "View Project",
     },
     {
       title: "AI Fraud Detection System",
-      status: "Coming Next",
+      label: "Next Project",
+      status: "Concept Exploration",
       description:
-        "Building a machine learning system that detects suspicious financial transactions and explains model predictions.",
-    },
-    {
-      title: "Mobile Banking Application",
-      status: "Completed",
-      description:
-        "Built a C++ banking application with account management, authentication concepts, file persistence, and transaction workflows.",
+        "Exploring machine learning approaches for detecting fraudulent financial transactions with a focus on explainable AI, risk analysis, and practical decision support.",
+      link: null,
+      button: null,
     },
   ];
 
   return (
-    <section className="section">
+    <section className="section" id="engineering-projects">
       <div className="section-header">
-        <p className="eyebrow">Current & Upcoming Work</p>
+        <p className="eyebrow">Engineering Projects</p>
 
-        <h2>The next chapter of my engineering journey.</h2>
+        <h2>Projects that show how I’m growing as an engineer.</h2>
 
         <p>
-          I’m continuing to grow through projects that connect artificial
-          intelligence, financial technology, cybersecurity, and software
-          engineering.
+          GrowthPilot shows product and AI systems thinking. Mobile Bank shows
+          core software engineering fundamentals. AI Fraud Detection represents
+          where I’m expanding next across AI, fintech, and cybersecurity.
         </p>
       </div>
 
-      <div className="currently-building-grid">
+      <div className="project-role-grid">
         {projects.map((project) => (
-          <article className="building-card" key={project.title}>
-            <span>{project.status}</span>
+          <article className="project-role-card" key={project.title}>
+            <span className="project-role-label">{project.label}</span>
 
-            <h3>{project.title}</h3>
+            <div>
+              <p className="project-role-status">{project.status}</p>
+              <h3>{project.title}</h3>
+              <p>{project.description}</p>
+            </div>
 
-            <p>{project.description}</p>
+            {project.link && (
+              <Link to={project.link} className="secondary-button">
+                {project.button}
+              </Link>
+            )}
           </article>
         ))}
       </div>
