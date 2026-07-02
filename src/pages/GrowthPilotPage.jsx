@@ -1,38 +1,27 @@
 import growthPilot from "../data/growthpilot";
-import EvolutionTimeline from "../components/caseStudy/EvolutionTimeline";
+
+import HeroSection from "../components/caseStudy/sections/HeroSection";
+import ProblemSection from "../components/caseStudy/sections/ProblemSection";
+import SolutionSection from "../components/caseStudy/sections/SolutionSection";
+import ArchitectureSection from "../components/caseStudy/sections/ArchitectureSection";
+import EvolutionSection from "../components/caseStudy/sections/EvolutionSection";
+import DecisionSection from "../components/caseStudy/sections/DecisionSection";
+import JournalSection from "../components/caseStudy/sections/JournalSection";
+import CapabilitiesSection from "../components/caseStudy/sections/CapabilitiesSection";
+import FutureSection from "../components/caseStudy/sections/FutureSection";
 
 function GrowthPilotPage() {
   return (
     <>
-      <section className="section case-hero">
-        <div className="section-header">
-          <p className="eyebrow">GrowthPilot Case Study</p>
-          <h1>{growthPilot.title}</h1>
-          <p>{growthPilot.tagline}</p>
-        </div>
-      </section>
-
-      <section className="section case-section">
-        <div className="section-header">
-          <p className="eyebrow">The Challenge</p>
-          <h2>Helping entrepreneurs make clearer business decisions.</h2>
-          <p>{growthPilot.challenge}</p>
-        </div>
-      </section>
-
-      <section className="section case-section">
-        <div className="section-header">
-          <p className="eyebrow">Product Evolution</p>
-          <h2>From pricing calculator to AI decision workspace.</h2>
-          <p>
-            GrowthPilot evolved through multiple stages, each adding a new layer
-            of engineering depth, product thinking, and decision-support
-            capability.
-          </p>
-        </div>
-
-        <EvolutionTimeline items={growthPilot.evolution} />
-      </section>
+      <HeroSection hero={growthPilot.hero} />
+      <ProblemSection problem={growthPilot.problem} />
+      <SolutionSection solution={growthPilot.solution} />
+      <ArchitectureSection architecture={growthPilot.architecture} />
+      <EvolutionSection evolution={growthPilot.evolution} />
+      <DecisionSection decisions={growthPilot.engineeringDecisions} />
+      <JournalSection journal={growthPilot.journal} />
+      <CapabilitiesSection capabilities={growthPilot.capabilities} />
+      <FutureSection futureVision={growthPilot.futureVision} />
     </>
   );
 }

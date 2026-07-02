@@ -3,13 +3,7 @@ function CapabilitiesSection({ capabilities }) {
     <section className="section">
       <div className="section-header">
         <p className="eyebrow">Platform Capabilities</p>
-
         <h2>What GrowthPilot can do.</h2>
-
-        <p>
-          GrowthPilot combines business analytics, AI-assisted reasoning, and
-          structured workflows to help entrepreneurs make better decisions.
-        </p>
       </div>
 
       <div className="currently-building-grid">
