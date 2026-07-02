@@ -82,3 +82,72 @@
     grid-template-columns: 1fr;
   }
 }
+
+.timeline-lesson {
+  margin-top: 22px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.timeline-lesson strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.timeline-lesson p {
+  margin: 0;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  margin: 80px 0;
+}
+
+.timeline-item.right .timeline-content {
+  order: 2;
+}
+
+.timeline-item.right .timeline-image {
+  order: 1;
+}
+
+.timeline-number {
+  display: inline-flex;
+  width: 42px;
+  height: 42px;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 999px;
+
+  background: var(--accent);
+
+  color: white;
+
+  font-weight: 700;
+
+  margin-bottom: 18px;
+}
+
+.timeline-image img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 900px) {
+  .timeline-item {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item.right .timeline-content,
+  .timeline-item.right .timeline-image {
+    order: initial;
+  }
+}
