@@ -4,6 +4,7 @@ import AboutSection from "../components/about/AboutSection";
 import TechnicalExpertise from "../components/home/TechnicalExpertise";
 import ContactSection from "../components/contact/ContactSection";
 import CurrentlyBuilding from "../components/home/CurrentlyBuilding";
+import PresentationSection from "../components/home/PresentationSection";
 
 function HomePage() {
   return (
@@ -13,6 +14,7 @@ function HomePage() {
       <AboutSection />
       <TechnicalExpertise />
       <CurrentlyBuilding />
+      <PresentationSection />
       <ContactSection />
     </>
   );
