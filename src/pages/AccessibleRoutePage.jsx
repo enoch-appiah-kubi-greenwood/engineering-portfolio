@@ -1,4 +1,3 @@
-```jsx
 function AccessibleRoutePage() {
   return (
     <>
@@ -88,4 +87,3 @@ function AccessibleRoutePage() {
 }
 
 export default AccessibleRoutePage;
-```
