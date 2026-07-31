@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 function PresentationSection() {
   return (
     <section className="section">
@@ -16,8 +14,23 @@ function PresentationSection() {
       </div>
 
       <article className="presentation-card">
-        <div>
-          <span className="project-role-label">FEATURED PRESENTATION</span>
+        <a
+          href="/presentations/accessible-route-for-everyone.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="presentation-cover"
+        >
+          <img
+            src="/presentations/accessible-route-cover.png"
+            alt="Accessible Route for Everyone presentation cover"
+            className="presentation-image"
+          />
+        </a>
+
+        <div className="presentation-content">
+          <span className="project-role-label">
+            FEATURED PRESENTATION
+          </span>
 
           <h3>Accessible Route for Everyone</h3>
 
@@ -27,14 +40,16 @@ function PresentationSection() {
             community reporting to improve travel for riders with mobility
             needs.
           </p>
-        </div>
 
-        <Link
-          to="/accessible-route"
-          className="primary-button"
-        >
-          View Presentation
-        </Link>
+          <a
+            href="/presentations/accessible-route-for-everyone.pdf"
+            target="_blank"
+            rel="noreferrer"
+            className="primary-button"
+          >
+            View Presentation
+          </a>
+        </div>
       </article>
     </section>
   );
