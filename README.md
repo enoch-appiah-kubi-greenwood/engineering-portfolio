@@ -1,173 +1,106 @@
 # Engineering Portfolio
 
-### Enoch Appiah-Kubi — Technology, AI & Cybersecurity
+### Enoch Appiah-Kubi — Information Technology, AI & Cybersecurity
 
-This repository contains the source code for my engineering portfolio, built to document the projects, technical decisions, and engineering thinking behind my work.
+Source code for my engineering portfolio. It documents the projects I build and
+the reasoning behind them, through case studies that walk from problem to
+solution to architecture to the decisions I made and what I learned.
 
-The portfolio is designed to show more than finished interfaces. It focuses on **how systems are conceived, built, evaluated, and evolved**.
+> **Good engineering is not only about what you build. It is about understanding
+> why you built it that way.**
 
-**Live Portfolio:** [enochappiahkubi.com](https://enochappiahkubi.com)
-
----
-
-## About the Portfolio
-
-This portfolio showcases projects across software development, artificial intelligence, data-driven systems, and cybersecurity.
-
-Rather than presenting projects as isolated applications, the portfolio uses case-study pages to explain:
-
-* The problem being addressed
-* The proposed solution
-* System architecture
-* Engineering decisions
-* Project evolution
-* Current capabilities
-* Lessons learned
-* Future development
-
-The goal is to demonstrate both **technical implementation** and the reasoning behind engineering decisions.
+**Live site:** [enochappiahkubi.com](https://enochappiahkubi.com)
 
 ---
 
 # Featured Project: GrowthPilot
 
-## AI-Powered Business Decision Support
+**An AI-powered business decision support platform for pricing, profitability,
+and strategic decision making.**
 
-GrowthPilot is an AI-powered business decision-support platform designed to help small-business owners make better decisions around **pricing, profitability, and strategy**.
+## Why I built it
 
-The project explores how AI and data-driven systems can move beyond simply displaying information and instead help users reason through business decisions.
+The idea came from a conversation with my uncle, an accountant, on the drive
+home from my outdoor conference championship meet. He was talking through app
+ideas he had been sitting on. I had already planned to build an AI project that
+summer, so I started asking myself whether I could use my tech skills to bring
+one of his ideas to life.
 
-> **GrowthPilot:** An AI-powered business decision support platform for pricing, profitability, and strategic decision making.
+His idea was a tool small-business owners could use to track profit and run the
+kind of analysis a hired accountant runs, at a price they could actually afford.
 
-The central problem is straightforward: small-business owners make important pricing and profitability decisions every day without always having access to structured analytical tools. GrowthPilot explores how AI-assisted reasoning and business analytics could make that decision-making process more accessible.
+It came from home. Our roots are in Ghana, where resale is a huge part of how
+people earn. Pricing is largely unregulated, and the same good can sell at
+drastically different prices inside the same market. Someone who sources jewelry
+from China to resell in Ghana without understanding the math underneath it can
+lose money on their own pricing and never know why.
 
----
+That is the problem GrowthPilot is aimed at: small-business owners make pricing
+and profitability decisions every day without structured analytical tools, and
+the people it costs the most are the ones who can least afford an accountant.
 
-## GrowthPilot's Evolution
+## How it was built
 
-GrowthPilot has evolved through several stages rather than being designed as a finished product from the beginning.
+I started deliberately basic, with no AI in it at all. I wanted the business
+logic proven before an AI component went anywhere near it.
 
-### 1. Python Pricing Engine
+1. **Python pricing engine.** A command-line tool covering pricing analysis,
+   break-even calculations, forecasting, and profitability reporting.
+2. **Business analytics.** Dashboards and reporting layered on top of the
+   individual calculations.
+3. **Web application.** Rebuilt in React for a usable interface and a foundation
+   for what came next.
+4. **AI workspace.** The current direction: ask a business question, get a
+   structured recommendation back.
 
-The project began as a command-line application focused on business logic.
+The full case study, including the system architecture, the engineering
+decisions, the engineering journal, and the future vision, is on the
+[live site](https://enochappiahkubi.com).
 
-The initial system supported:
+## Stack
 
-* Pricing analysis
-* Break-even calculations
-* Forecasting
-* Profitability reporting
+Python and FastAPI on the backend, React on the frontend, SQLite for storage,
+Random Forest models for demand forecasting, and a conversational engine
+connected to OpenAI.
 
-**Engineering lesson:** Strong business logic should exist before building a polished interface.
+## Current status
 
-### 2. Business Analytics
+GrowthPilot is a prototype, and there is a specific reason it has not moved past
+that.
 
-The project expanded beyond individual calculations into broader business analytics, dashboards, and reporting.
+The AI chatbox reaches OpenAI through the backend, and the architecture does not
+yet route efficiently enough. It spends tokens on basic questions and decisions
+that the deterministic engine from the earlier stages already answers. At any
+real usage, that is money leaking. Fixing that routing is the work standing
+between this prototype and something I would put in front of actual business
+owners.
 
-**Engineering lesson:** Useful insights create more value than simply displaying raw data.
+## Why it matters to me
 
-### 3. Web Application
-
-GrowthPilot was then rebuilt as a web application using React, creating a more accessible interface and establishing a foundation for future AI capabilities.
-
-**Engineering lesson:** Product architecture should evolve alongside the product itself.
-
-### 4. AI Workspace
-
-The current direction explores an AI-assisted workspace where users can ask business questions and receive structured recommendations.
-
-**Engineering lesson:** AI should guide decision making, not replace it.
-
----
-
-## GrowthPilot Architecture
-
-The portfolio presents GrowthPilot as a layered system rather than a single feature.
-
-The architecture section is implemented as a sequence of system layers, allowing the case study to communicate how the different parts of the proposed platform relate to one another.
-
-The broader concept connects:
-
-```text
-Business Data
-      ↓
-Business Analytics
-      ↓
-Predictive / AI Reasoning
-      ↓
-Structured Insights
-      ↓
-Decision Support
-      ↓
-Business Action
-```
-
-The emphasis is on turning information into decisions rather than treating AI as an isolated feature.
+GrowthPilot is the kind of work I want to do: software, AI, data, and a real
+business problem in the same project. Building it has meant working through
+product design, system architecture, business logic, AI integration, technical
+tradeoffs, and how to explain an engineering decision to someone who was not in
+the room for it.
 
 ---
 
-## Platform Capabilities
+# How the case studies are structured
 
-GrowthPilot is designed around the combination of:
+Every project on the site is documented along the same spine:
 
-* Business analytics
-* AI-assisted reasoning
-* Structured workflows
-* Pricing analysis
-* Profitability analysis
-* Strategic decision support
-* Conversational interaction
-* Future scenario analysis
+**Problem → Solution → Architecture → Decisions → Evolution → Lessons → Future**
 
-The portfolio's capabilities section describes the platform as combining business analytics, AI-assisted reasoning, and structured workflows to help entrepreneurs make better decisions.
-
----
-
-# Engineering Approach
-
-One of the main purposes of this portfolio is to document **engineering judgment**, not just implementation.
-
-For GrowthPilot, that includes questions such as:
-
-* What problem should the system actually solve?
-* Which functionality belongs in the core business logic?
-* When should a command-line system become a web application?
-* Where can AI provide meaningful value?
-* How should AI interact with existing business logic?
-* How should recommendations be presented to users?
-* Which capabilities belong in the prototype versus a future production system?
-
-The project documentation therefore treats architecture and product decisions as part of the engineering work.
-
----
-
-# Lessons From GrowthPilot
-
-GrowthPilot's case study documents several principles that have shaped the project:
-
-### Build the logic before the interface
-
-A polished interface cannot compensate for weak underlying business logic.
-
-### Insights matter more than raw data
-
-Displaying information is not the same as helping someone understand it.
-
-### Architecture should evolve
-
-As the problem definition changes, the architecture should change with it.
-
-### AI should assist judgment
-
-The purpose of AI is to help users reason through decisions, not remove the user's responsibility for those decisions.
-
-These lessons are documented directly within the project's engineering journal and evolution sections.
+The goal is to show the judgment behind a project alongside the implementation.
+For GrowthPilot especially, where the work is still moving from an early pricing
+tool toward a broader AI-assisted decision-support system, the reasoning is the
+more useful half.
 
 ---
 
 # Technology Stack
 
-The portfolio itself is built with:
+This portfolio site is built with:
 
 | Technology                  | Purpose                        |
 | --------------------------- | ------------------------------ |
@@ -183,13 +116,9 @@ The portfolio itself is built with:
 | Prettier                    | Formatting                     |
 | Vercel                      | Deployment                     |
 
-These dependencies and development scripts are defined in the repository's `package.json`.
-
 ---
 
 # Repository Structure
-
-The project follows a component-based React structure.
 
 ```text
 engineering-portfolio/
@@ -217,9 +146,7 @@ engineering-portfolio/
 └── vite.config.js
 ```
 
-The `src` directory is organized into assets, reusable components, data, pages, and styling.
-
-GrowthPilot's case study is assembled from dedicated sections including:
+GrowthPilot's case study page is composed from dedicated sections:
 
 ```text
 GrowthPilotPage
@@ -234,131 +161,31 @@ GrowthPilotPage
 └── Future Vision
 ```
 
-The page composes these sections around the GrowthPilot project data.
-
 ---
 
-# Development
+# Running it locally
 
-## Prerequisites
-
-* Node.js
-* npm
-* Git
-
-## Clone the Repository
+Requires Node.js, npm, and Git.
 
 ```bash
 git clone https://github.com/enoch-appiah-kubi-greenwood/engineering-portfolio.git
 cd engineering-portfolio
-```
-
-## Install Dependencies
-
-```bash
 npm install
-```
-
-## Start the Development Server
-
-```bash
 npm run dev
 ```
 
-Vite will start the local development server.
-
-## Build for Production
+Other scripts defined in `package.json`:
 
 ```bash
-npm run build
+npm run build      # production build
+npm run preview    # preview the production build
+npm run lint       # run ESLint
 ```
 
-## Preview the Production Build
+## Deployment
 
-```bash
-npm run preview
-```
-
-## Run Linting
-
-```bash
-npm run lint
-```
-
-These commands correspond to the scripts currently defined in `package.json`.
-
----
-
-# Deployment
-
-The portfolio is configured for deployment through Vercel.
-
-The repository includes a `vercel.json` configuration that rewrites incoming routes to `index.html`, allowing the client-side React application to handle navigation correctly.
-
-**Live site:** [enochappiahkubi.com](https://enochappiahkubi.com)
-
----
-
-# Project Philosophy
-
-This portfolio is built around a simple idea:
-
-> **Good engineering is not only about what you build. It is about understanding why you built it that way.**
-
-For that reason, projects are documented through their:
-
-**Problem → Solution → Architecture → Decisions → Evolution → Lessons → Future**
-
-This approach is especially important for GrowthPilot, where the project is still evolving from an early pricing tool into a broader AI-assisted decision-support concept.
-
----
-
-# Current Status
-
-This repository is an **active engineering portfolio** and is continuously evolving.
-
-GrowthPilot is currently presented as a **prototype and product-development case study**. The portfolio documents the system's direction, architecture, capabilities, and evolution while the underlying concept continues to develop.
-
-The portfolio should therefore not be interpreted as claiming that every future GrowthPilot capability is currently implemented in production.
-
----
-
-# Future Direction
-
-Future GrowthPilot development may explore:
-
-* More advanced predictive analytics
-* AI-assisted business analysis
-* Scenario and "what-if" modeling
-* Automated business insights
-* Richer financial analysis
-* More sophisticated conversational workflows
-* Real-world business data integration
-* Production-grade backend infrastructure
-* Authentication and user management
-* Scalable data storage
-* Model evaluation and monitoring
-
-The purpose of the current prototype is to establish the product direction and engineering foundation before expanding into those areas.
-
----
-
-# Why GrowthPilot Matters
-
-GrowthPilot represents the type of engineering work I am interested in pursuing: projects where **software, AI, data, and business problems intersect**.
-
-The project has allowed me to work through more than implementation alone. It has required thinking about:
-
-* Product design
-* System architecture
-* Business logic
-* AI integration
-* User experience
-* Technical tradeoffs
-* Iterative development
-* Communicating engineering decisions
-
-That makes GrowthPilot one of the central projects in this portfolio.
+Deployed through Vercel. The repository's `vercel.json` rewrites incoming routes
+to `index.html` so the client-side React router handles navigation.
 
 ---
 
@@ -366,18 +193,9 @@ That makes GrowthPilot one of the central projects in this portfolio.
 
 **Enoch Appiah-Kubi**
 
-Computer Information Technology
-Cybersecurity Focus
-
-Interested in the intersection of:
-
-* Artificial Intelligence
-* Software Engineering
-* Cybersecurity
-* Data
-* Financial Technology
-
-**Portfolio:** [enochappiahkubi.com](https://enochappiahkubi.com)
+Information Technology major, cybersecurity minor. Interested in the
+intersection of artificial intelligence, software engineering, cybersecurity,
+data, and financial technology.
 
 **GitHub:** [github.com/enoch-appiah-kubi-greenwood](https://github.com/enoch-appiah-kubi-greenwood)
 
@@ -385,4 +203,5 @@ Interested in the intersection of:
 
 ## License
 
-This repository is a personal engineering portfolio. Project code and content are maintained for portfolio, educational, and demonstration purposes.
+This repository is a personal engineering portfolio. Project code and content
+are maintained for portfolio, educational, and demonstration purposes.
